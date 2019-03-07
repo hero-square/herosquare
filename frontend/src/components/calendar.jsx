@@ -12,12 +12,23 @@ class Calendar extends Component {
   render() {
     let days = [];
     for (let i = 0; i < this.state.days.length; i + 1) {
-      days.push(<div className="headerDay" >{this.state.days[i]}</div>)
+      days.push(
+        <div className="dayColumn">
+          <div className="headerDay" >
+            {this.state.days[i]}
+          </div>
+        </div>
+      )
     }
     let schedule = [];
     for (let i = 0; i < this.state.hours.length; i += 1) {
-      schedule.push(<div className="halfHour">
-      <div className="hoursDisplay">{this.state.hours[i]}</div></div>)
+      schedule.push(
+        <div className="halfHour">
+          <div className="hoursDisplay">
+            {this.state.hours[i]}
+          </div>
+        </div>
+      )
     }
     return (
       <div className="calendar">

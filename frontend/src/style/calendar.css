@@ -3,9 +3,8 @@
     width: 729px;
 }
 
-.daysColumn {
-    height:100%;
-    width:12.5%;
+.dayColumn {
+    border-right: 1px dotted #ddd;
 }
 
 .halfHour {
