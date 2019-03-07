@@ -1,20 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import ListElement from './ListElement.jsx';
+import '../style/Menu.css'
 
 const Menu = props => {
-  const [isOpen, setIsOpen] = props;
+  const {isOpen, setIsOpen, list} = props;
 
   return (
-    <div>
-      <h3>hi</h3>
+    <div className={`App__menu ${isOpen ? 'App__menu--open' : 'App__menu--closed'}`}>
       {/* append is-active to animate hamburger */}
+      <button
+        className={`
+        hamburger
+        hamburger--elastic
+        Menu__hamburger
+        ${isOpen ? 'is-active' : ''}
+        `}
+        onClick={() => setIsOpen(!isOpen)}
+        type="button">
+        <span className="hamburger-box">
+          <span className="hamburger-inner" />
+        </span>
+      </button>
+      {list.map(el => (
+        <ListElement el={el} />
+      ))}
     </div>
   );
-};
-
-Menu.propTypes = {
-  isOpen: PropTypes.bool,
-  setIsOpen: PropTypes.func,
 };
 
 export default Menu;
