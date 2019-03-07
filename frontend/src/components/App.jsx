@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import '../style/App.css';
 import '../style/hamburger.css';
 import Authen from './Authen';
+import Calendar from './calendar.jsx';
 
 //change this to be better later
 
@@ -21,6 +22,9 @@ class App extends Component {
           <h2 className="App__title"> HeroSquare </h2>
         </header>
         <Authen />
+        <div className="calendarContainer">
+          <Calendar/>
+        </div>
       </div>
     );
   }
