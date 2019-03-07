@@ -12,7 +12,7 @@ import list from './routesList';
 //change this to be better later
 
 const App = props => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="App">
