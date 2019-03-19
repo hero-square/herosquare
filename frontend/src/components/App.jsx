@@ -14,10 +14,12 @@ import list from './routesList';
 const App = props => {
   const [isOpen, setIsOpen] = useState(false);
 
+
+
   return (
     <div className="App">
       <header className="App__header">
-        <img className="App__logo" src={logo} alt="logo" />
+        {window.innerWidth < '800px' ? <div>hi</div> : <img className="App__logo" src={logo} alt="logo" />}
         <h2 className="App__title"> HeroSquare </h2>
       </header>
       <Router>

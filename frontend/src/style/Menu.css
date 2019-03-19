@@ -6,6 +6,8 @@
 .Menu__list-element {
   width: 100%;
   height: 3rem;
+  padding-left:3rem;
+  text-align:left;
 }
 .Menu__list-element:hover {
   background-color: purple;

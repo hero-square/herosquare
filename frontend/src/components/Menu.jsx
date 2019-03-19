@@ -22,7 +22,7 @@ const Menu = props => {
         </span>
       </button>
       {list.map(el => (
-        <ListElement el={el} />
+        <ListElement el={el} isOpen={isOpen} />
       ))}
     </div>
   );
