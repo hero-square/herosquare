@@ -4,18 +4,17 @@ import Authen from './Authen';
 
 const list = [
   {
-    title: 'Calendar',
-    path: '/calendar',
-    component: Authen,
+    title: 'Home',
+    path: 'home',
   },
   {
-    title: 'Authen',
-    path: '/',
+    title: 'Calendar',
+    path: 'calendar',
     component: Authen,
   },
   {
     title: 'Thing',
-    path: '/thing',
+    path: 'thing',
     render: props => <NotFound {...props} butt={true} />,
   },
 ];

@@ -5,9 +5,9 @@ import NotFound from './NotFound';
 import Login from './Login';
 import Environment from './Environment';
 
-//change this to be better later
-
 const App = props => {
+
+  // TODO: should check for cookies to determine login
   const [isLoggedIn, useIsLoggedIn] = useState(false);
 
   return (
@@ -17,11 +17,11 @@ const App = props => {
           <Route
             path="/"
             exact={true}
-            render={() => <Login useIsLoggedIn={useIsLoggedIn} isLoggedIn={isLoggedIn} />}
+            render={() => <Login useIsLoggedIn={useIsLoggedIn} isLoggedIn={isLoggedIn} {...props} />}
           />
           <Route
             path="/:location"
-            render={() => <Environment isLoggedIn={isLoggedIn} />}
+            render={props => <Environment isLoggedIn={isLoggedIn} {...props} />}
           />
         </Switch>
       </Router>

@@ -1,13 +1,17 @@
 import React from 'react';
 import ListElement from './ListElement.jsx';
-import '../style/Menu.css'
+import '../style/Menu.css';
 import '../style/hamburger.css';
+import uuidv4 from 'uuid/v4';
 
 const Menu = props => {
-  const {isOpen, setIsOpen, list} = props;
+  const { isOpen, setIsOpen, list } = props;
 
   return (
-    <div className={`App__menu ${isOpen ? 'App__menu--open' : 'App__menu--closed'}`}>
+    <div
+      className={`App__menu ${
+        isOpen ? 'App__menu--open' : 'App__menu--closed'
+      }`}>
       {/* append is-active to animate hamburger */}
       <button
         className={`
@@ -23,7 +27,7 @@ const Menu = props => {
         </span>
       </button>
       {list.map(el => (
-        <ListElement el={el} isOpen={isOpen} />
+        <ListElement el={el} isOpen={isOpen} key={uuidv4()} />
       ))}
     </div>
   );
