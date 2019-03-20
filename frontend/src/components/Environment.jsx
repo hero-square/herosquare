@@ -4,14 +4,14 @@ import EnvironmentSmall from './EnvironmentSmall';
 import { Redirect } from 'react-router-dom';
 
 const Environment = props => {
-  if (!isLoggedIn) return <Redirect to="/" />;
-
   const [smallScreen, useSmallScreen] = useState(false);
   const [userInfo, useUserInfo] = useState({});
   const { match, isLoggedIn } = props;
 
   useEffect(() => {
     // api call for user data
+    //* temporary mock data
+    if (!isLoggedIn) return <Redirect to="/" />;
     useUserInfo({
       userID: 0,
       name: 'PersonMcPersonFace',
@@ -27,7 +27,11 @@ const Environment = props => {
       },
       picture: '',
     });
-  });
+    console.log('mount');
+    return () => {
+      console.log('cleanup');
+    };
+  }, []);
 
   return (
     <>

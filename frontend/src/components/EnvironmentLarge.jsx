@@ -8,14 +8,21 @@ import uuidv4 from 'uuid/v4';
 import list from './routes';
 
 const EnvironmentLarge = props => {
-  const { match } = props;
+  const { match, userInfo } = props;
   const [isOpen, setIsOpen] = useState(false);
-  console.log(match.path)
+
+  console.log(props);
   return (
     <>
       <Header />
       <div className="App__wrapper">
-        <Menu list={list} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Menu
+          list={list}
+          isOpen={isOpen}
+          name={userInfo.name}
+          picture={userInfo.picture}
+          setIsOpen={setIsOpen}
+        />
         <div
           className={`App__container ${
             isOpen ? 'App__container--open' : 'App__container--closed'
