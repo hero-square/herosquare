@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react';
 import NotFound from './NotFound';
 import Authen from './Authen';
+import Home from './Home';
 
 const list = [
   {
     title: 'Home',
     path: 'home',
+    render: props => <Home {...props} />,
   },
   {
     title: 'Calendar',
     path: 'calendar',
-    component: Authen,
+    render: props => <Authen {...props} />,
   },
   {
     title: 'Thing',
