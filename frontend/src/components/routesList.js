@@ -3,6 +3,7 @@ import NotFound from './NotFound';
 import Authen from './Authen';
 import Home from './Home';
 
+//* add new routes here
 const list = [
   {
     title: 'Home',
@@ -17,7 +18,7 @@ const list = [
   {
     title: 'Thing',
     path: 'thing',
-    render: props => <NotFound {...props} butt={true} />,
+    render: props => <NotFound {...props} />,
   },
 ];
 

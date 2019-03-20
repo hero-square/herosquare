@@ -4,7 +4,7 @@ import React from 'react'
 const EnvironmentSmall = props => {
   return (
     <div>
-      <p>hi everyone</p>
+      <p> this is for mobile development, should do it eventually mobile is very popular nowadays</p>
     </div>
   )
 }
