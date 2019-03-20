@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import uuidv4 from 'uuid/v4';
 
 // contains Routes
-import list from './routesList';
+import list from './routes';
 
 const EnvironmentLarge = props => {
   const { match } = props;

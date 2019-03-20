@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import '../style/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NotFound from './NotFound';
 import Login from './Login';
 import Environment from './Environment';
 
 const App = props => {
-
   // TODO: should check for cookies to determine login
   const [isLoggedIn, useIsLoggedIn] = useState(false);
 
@@ -17,7 +15,13 @@ const App = props => {
           <Route
             path="/"
             exact={true}
-            render={() => <Login useIsLoggedIn={useIsLoggedIn} isLoggedIn={isLoggedIn} {...props} />}
+            render={() => (
+              <Login
+                useIsLoggedIn={useIsLoggedIn}
+                isLoggedIn={isLoggedIn}
+                {...props}
+              />
+            )}
           />
           <Route
             path="/:location"

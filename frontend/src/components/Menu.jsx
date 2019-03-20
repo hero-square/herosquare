@@ -3,9 +3,10 @@ import ListElement from './ListElement.jsx';
 import '../style/Menu.css';
 import '../style/hamburger.css';
 import uuidv4 from 'uuid/v4';
+import list from './routes';
 
 const Menu = props => {
-  const { isOpen, setIsOpen, list } = props;
+  const { isOpen, setIsOpen } = props;
 
   return (
     <div
