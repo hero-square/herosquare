@@ -1,13 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 import EnvironmentLarge from './EnvironmentLarge';
 import EnvironmentSmall from './EnvironmentSmall';
 import { Redirect } from 'react-router-dom';
 
 const Environment = props => {
-  const [smallScreen, useSmallScreen] = useState('false');
-  const { match, isLoggedIn } = this.props;
+  const [smallScreen, useSmallScreen] = useState(false);
+  const { match, isLoggedIn } = props;
 
-  if (!isLoggedIn) return <Redirect to="/" />;
+  if (!isLoggedIn) return (<Redirect to= '/' />);
 
   return (
     <>

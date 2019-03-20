@@ -1,7 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
+import Menu from './Menu';
 import Header from './Header';
 
-const EnvironmentLarge = () => {
+// contains Routes
+import list from './routesList';
+
+const EnvironmentLarge = props => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>

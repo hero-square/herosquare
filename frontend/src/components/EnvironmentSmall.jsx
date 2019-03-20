@@ -1,10 +1,10 @@
 import React from 'react'
 
 // for small screens
-const EnvironmentSmall = () => {
+const EnvironmentSmall = props => {
   return (
     <div>
-      
+      <p>hi everyone</p>
     </div>
   )
 }

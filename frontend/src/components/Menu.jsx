@@ -1,6 +1,7 @@
 import React from 'react';
 import ListElement from './ListElement.jsx';
 import '../style/Menu.css'
+import '../style/hamburger.css';
 
 const Menu = props => {
   const {isOpen, setIsOpen, list} = props;
