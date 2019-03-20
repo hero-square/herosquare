@@ -14,7 +14,7 @@ const EnvironmentLarge = props => {
   console.log(props);
   return (
     <>
-      <Header />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="App__wrapper">
         <Menu
           list={list}

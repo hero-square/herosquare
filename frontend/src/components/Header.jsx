@@ -1,15 +1,30 @@
 import React from 'react';
 import logo from '../logo.svg';
+import '../style/hamburger.css';
 
-const Header = () => {
+const Header = props => {
+  const { isOpen, setIsOpen } = props;
+  
   return (
     <header className="App__header">
       {window.innerWidth < '800px' ? (
         <div>hi</div>
       ) : (
-        <img className="App__logo" src={logo} alt="logo" />
+        <button
+          className={`
+        hamburger
+        hamburger--elastic
+        Menu__hamburger
+        ${isOpen ? 'is-active' : ''}
+        `}
+          onClick={() => setIsOpen(!isOpen)}
+          type="button">
+          <span className="hamburger-box">
+            <span className="hamburger-inner" />
+          </span>
+        </button>
       )}
-      <h2 className="App__title"> HeroSquare </h2>
+      <h1 className="App__title"> HeroSquare </h1>
     </header>
   );
 };

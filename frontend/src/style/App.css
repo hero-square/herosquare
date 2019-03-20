@@ -23,7 +23,7 @@
 }
 
 .App__menu {
-  background-color: black;
+  background-color: grey;
   height: 100%;
   width: 15rem;
   display: flex;
@@ -34,13 +34,12 @@
 }
 /* after stretch: left:0rem */
 .App__menu--closed {
-  background-color: black;
   height: 100%;
   width: 15rem;
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: -11rem;
+  left: -15rem;
 }
 
 
@@ -49,7 +48,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  left: 4rem;
+  left: 0rem;
   transition: .15s ease-in left;
 }
 /* after stretch: left:15rem */
