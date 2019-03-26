@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Headers';
+import Headers from './Headers';
 import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import NotFound from './NotFound';
@@ -40,7 +40,7 @@ const Protected = props => {
 
   return (
     <>
-      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Headers isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="App__wrapper">
         <Menu isOpen={isOpen} name={userInfo.name} picture={userInfo.picture} />
