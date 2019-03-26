@@ -1,29 +1,38 @@
-import React, { Component } from 'react';
-import logo from '../logo.svg';
+import React, { useState } from 'react';
 import '../style/App.css';
-import '../style/hamburger.css';
-import Authen from './Authen';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './Login';
+import Protected from './Protected';
+import Landing from './Landing';
 
-//change this to be better later
+const App = props => {
+  // TODO: should check for cookies/localstorage to determine login
+  const [authStatus, setAuthStatus] = useState(false);
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App__header">
-          <button className="hamburger hamburger--elastic" type="button">
-            <span className="hamburger-box">
-              <span className="hamburger-inner" />
-            </span>
-          </button>
-
-          <img className="App__logo" src={logo} alt="logo" />
-          <h2 className="App__title"> HeroSquare </h2>
-        </header>
-        <Authen />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route path='/' exact={true} component={Landing}/>
+          <Route
+            path="/Login"
+            exact={true}
+            render={() => (
+              <Login
+                setAuthStatus={setAuthStatus}
+                authStatus={authStatus}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path="/:location"
+            render={props => <Protected authStatus={authStatus} setAuthStatus={setAuthStatus} {...props} />}
+          />
+        </Switch>
+      </Router>
+    </div>
+  );
+};
 
 export default App;
