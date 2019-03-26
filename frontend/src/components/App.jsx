@@ -3,6 +3,7 @@ import '../style/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Login';
 import Protected from './Protected';
+import Landing from './Landing';
 
 const App = props => {
   // TODO: should check for cookies to determine login
@@ -13,8 +14,9 @@ const App = props => {
     <div className="App">
       <Router>
         <Switch>
+          <Route path='/' exact={true} component={Landing}/>
           <Route
-            path="/"
+            path="/Login"
             exact={true}
             render={() => (
               <Login

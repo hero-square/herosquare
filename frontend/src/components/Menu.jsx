@@ -7,8 +7,6 @@ import list from './routes';
 const Menu = props => {
   const { isOpen, name, picture } = props;
 
-  //** should have profile picture and name when open */
-
   return (
     <div
       className={`App__menu ${
@@ -16,7 +14,7 @@ const Menu = props => {
       }`}>
       <div>
         <img src={picture} alt="" width='150px'/>
-        <h3>{name}</h3>
+        <h2>{name}</h2>
       </div>
       {list.map(el => (
         <ListElement el={el} isOpen={isOpen} key={uuidv4()} />

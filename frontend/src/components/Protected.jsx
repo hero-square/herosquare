@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import NotFound from './NotFound';
 import Menu from './Menu';
+import Calendar from './Calendar'
 
 const Environment = props => {
   const [userInfo, setUserInfo] = useState({});
@@ -56,7 +57,10 @@ const Environment = props => {
                 <Home {...props} setAuthStatus={setAuthStatus} />
               )}
             />
-            <Route path={`/calendar`} component={NotFound} />
+            <Route
+              path={`/calendar`}
+              render={props => <Calendar userInfo={userInfo} {...props} />}
+            />
             <Route path={`/thing`} render={props => <NotFound {...props} />} />
             ))}
           </Switch>
