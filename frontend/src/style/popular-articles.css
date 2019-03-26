@@ -1,0 +1,43 @@
+.popular-articles-container {
+  display: flex;
+  flex-direction: flex-start;
+  flex-wrap: wrap;
+  height:400px;
+  background-color:orange;
+
+}
+
+.popular-article--item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 250px;
+  margin:15px;
+  background-color:green;
+}
+
+.popular-articles-container p {
+  color: lightyellow;
+  font-size: 15px;
+  text-align: left;
+  margin:  5px;
+  padding: 0;
+}
+.popular-articles-container h1 {
+  color: white;
+  margin: 5px 5px;
+  padding: 0;
+  text-decoration: none;
+}
+.popular-articles-container img {
+  width:220px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.popular-article--lrg{
+
+}
+.popular-article--sml{
+
+}
