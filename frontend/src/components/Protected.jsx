@@ -31,7 +31,7 @@ const Environment = props => {
           professor: 'TeacheryMcTeacherFace',
         },
       },
-      picture: '',
+      picture: 'https://s.hswstatic.com/gif/whiskers-sam.jpg',
     });
     console.log('mount');
     return () => {
