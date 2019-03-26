@@ -1,20 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import ListElement from './ListElement.jsx';
+import '../style/Menu.css';
+import uuidv4 from 'uuid/v4';
+import list from './routes';
 
 const Menu = props => {
-  const [isOpen, setIsOpen] = props;
+  const { isOpen, name, picture } = props;
 
   return (
-    <div>
-      <h3>hi</h3>
-      {/* append is-active to animate hamburger */}
+    <div
+      className={`App__menu ${
+        isOpen ? 'App__menu--open' : 'App__menu--closed'
+      }`}>
+      <div>
+        <img src={picture} alt="" width='150px'/>
+        <h2>{name}</h2>
+      </div>
+      {list.map(el => (
+        <ListElement el={el} isOpen={isOpen} key={uuidv4()} />
+      ))}
     </div>
   );
-};
-
-Menu.propTypes = {
-  isOpen: PropTypes.bool,
-  setIsOpen: PropTypes.func,
 };
 
 export default Menu;

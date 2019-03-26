@@ -1,3 +1,10 @@
+html,body{
+  margin:0;
+  height:100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-size: 62.5%;
   margin: 0;
@@ -20,19 +27,20 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  height:100%;
 }
 
 button {
-  background: grey;
+  background-color:transparent;
+
   border: none;
   padding: .5rem;
 }
-
-img{
-
-
+button::-moz-focus-inner {
+  border: 0;
 }
+
+
+
 
