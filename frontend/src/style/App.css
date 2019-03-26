@@ -12,8 +12,14 @@
   background-color: #282c34;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  padding: 0px 10px;
   color: white;
+}
+
+.App__left {
+  display: flex;
+  align-items: center;
 }
 
 .App__wrapper {
@@ -30,7 +36,7 @@
   flex-direction: column;
   position: absolute;
   left: 0rem;
-  transition: .15s ease-in left;
+  transition: 0.15s ease-in left;
 }
 /* after stretch: left:0rem */
 .App__menu--closed {
@@ -42,20 +48,18 @@
   left: -15rem;
 }
 
-
 .App__container {
   display: flex;
   height: 100%;
   width: 100%;
   position: absolute;
   left: 0rem;
-  transition: .15s ease-in left;
+  transition: 0.15s ease-in left;
 }
 /* after stretch: left:15rem */
 .App__container--open {
   left: 15rem;
 }
-
 
 @media screen and (max-width: 600px) {
   .App__container {
@@ -72,7 +76,6 @@
     z-index: -1;
   }
 }
-
 
 @keyframes App-logo-spin {
   from {
