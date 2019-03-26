@@ -6,12 +6,12 @@ import { Redirect } from 'react-router-dom';
 const Environment = props => {
   const [smallScreen, useSmallScreen] = useState(false);
   const [userInfo, useUserInfo] = useState({});
-  const { match, isLoggedIn } = props;
+  const { match, authStatus } = props;
 
   useEffect(() => {
     // api call for user data
     //* temporary mock data
-    if (!isLoggedIn) return <Redirect to="/" />;
+    if (!authStatus) return <Redirect to="/" />;
     useUserInfo({
       userID: 0,
       name: 'PersonMcPersonFace',

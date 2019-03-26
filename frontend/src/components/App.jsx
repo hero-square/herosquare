@@ -8,7 +8,7 @@ import RetrievePassword from './RetrievePassword';
 
 const App = props => {
   // TODO: should check for cookies to determine login
-  const [isLoggedIn, useIsLoggedIn] = useState(false);
+  const [authStatus, setAuthStatus] = useState(false);
 
   return (
     <div className="App">
@@ -19,8 +19,8 @@ const App = props => {
             exact={true}
             render={() => (
               <Login
-                useIsLoggedIn={useIsLoggedIn}
-                isLoggedIn={isLoggedIn}
+                setAuthStatus={setAuthStatus}
+                authStatus={authStatus}
                 {...props}
               />
             )}
@@ -29,7 +29,7 @@ const App = props => {
           <Route path="/retrievePassword" component={'RetrievePassword'} />
           <Route
             path="/:location"
-            render={props => <Environment isLoggedIn={isLoggedIn} {...props} />}
+            render={props => <Environment authStatus={authStatus} {...props} />}
           />
         </Switch>
       </Router>
