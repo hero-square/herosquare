@@ -3,8 +3,6 @@ import '../style/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Login';
 import Environment from './Environment';
-import SignUp from './SignUp';
-import RetrievePassword from './RetrievePassword';
 
 const App = props => {
   // TODO: should check for cookies to determine login
