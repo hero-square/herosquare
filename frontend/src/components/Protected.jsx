@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
+import Header from './Headers';
 import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import NotFound from './NotFound';
 import Menu from './Menu';
 import Calendar from './Calendar'
 
-const Environment = props => {
+const Protected = props => {
   const [userInfo, setUserInfo] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const { authStatus, setAuthStatus, history } = props;
 
-  // check authentication when authstatus is updated
+  //TODO check authentication when authstatus is updated
   useEffect(() => {
     if (!authStatus) history.push('/');
   }, [authStatus]);
 
   useEffect(() => {
-    // api call for user data
+    //TODO api call for user data
     //* temporary mock data
     setUserInfo({
       userID: 0,
@@ -34,9 +34,7 @@ const Environment = props => {
       },
       picture: 'https://s.hswstatic.com/gif/whiskers-sam.jpg',
     });
-    console.log('mount');
     return () => {
-      console.log('cleanup');
     };
   }, []);
 
@@ -70,4 +68,4 @@ const Environment = props => {
   );
 };
 
-export default Environment;
+export default Protected;

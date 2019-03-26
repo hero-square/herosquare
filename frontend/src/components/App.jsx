@@ -6,9 +6,8 @@ import Protected from './Protected';
 import Landing from './Landing';
 
 const App = props => {
-  // TODO: should check for cookies to determine login
+  // TODO: should check for cookies/localstorage to determine login
   const [authStatus, setAuthStatus] = useState(false);
-  console.log(authStatus)
 
   return (
     <div className="App">
