@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import PopularArticleItem from './PopularArticleItem';
-import { useFetchAPI } from './customHooks';
+// import PopularArticleItem from './PopularArticleItem';
+// import { useFetchAPI } from './customHooks';
 import LoadingIcon from './LoadingIcon';
 import '../style/popular-articles.css'
 
