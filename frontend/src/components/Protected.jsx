@@ -4,7 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import NotFound from './NotFound';
 import Menu from './Menu';
-import Calendar from './Calendar'
+import Calendar from './Calendar';
+import AddClasses from './AddClasses'
 
 const Protected = props => {
   const [userInfo, setUserInfo] = useState({});
@@ -34,8 +35,7 @@ const Protected = props => {
       },
       picture: 'https://s.hswstatic.com/gif/whiskers-sam.jpg',
     });
-    return () => {
-    };
+    return () => {};
   }, []);
 
   return (
@@ -59,7 +59,8 @@ const Protected = props => {
               path={`/calendar`}
               render={props => <Calendar userInfo={userInfo} {...props} />}
             />
-            <Route path={`/thing`} render={props => <NotFound {...props} />} />
+            <Route path={`/addclasses`} render={props => <AddClasses {...props} />} />
+            <Route component={NotFound} />
             ))}
           </Switch>
         </div>

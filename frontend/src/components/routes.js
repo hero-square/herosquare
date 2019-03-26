@@ -9,8 +9,8 @@ const list = [
     path: 'calendar',
   },
   {
-    title: 'Thing',
-    path: 'thing',
+    title: 'Add Classes',
+    path: 'addclasses',
   },
 ];
 
