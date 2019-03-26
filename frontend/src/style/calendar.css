@@ -1,0 +1,63 @@
+.calendar {
+    height: 578px;
+    width: 729px;
+}
+
+.classContainer {
+    z-index: 70;
+    left: 49px;
+    position: absolute;
+    display: flex;
+}
+
+.dayColumn {
+    width: 96px;
+    height: 560px;
+    border-right: 1px dotted #ddd;
+}
+
+.halfHour {
+    height: 19px;
+    z-index: 50;
+    border-bottom: 1px dotted #ddd;
+    background-color: white;
+}
+
+.header {
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+}
+
+.headerDay {
+    top: 0;
+    width: 96px;
+    height: 16px;
+    z-index: 60;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.hoursDisplay {
+    z-index: 50;
+    width: 49px;
+    height: 17px;
+    background-color: #fafafa;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.timeContainer {
+    position: relative;
+}
+
+.scheduleContainer {
+    top: 16px;
+}
