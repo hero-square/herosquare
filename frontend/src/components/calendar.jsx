@@ -11,13 +11,17 @@ class Calendar extends Component {
   }
   render() {
     let days = [];
-    for (let i = 0; i < this.state.days.length; i + 1) {
+    let columns = [];
+    for (let i = 0; i < this.state.days.length; i += 1) {
       days.push(
-        <div className="dayColumn">
+        // <div className="dayColumn">
           <div className="headerDay" >
             {this.state.days[i]}
           </div>
-        </div>
+        // </div>
+      )
+      columns.push(
+        <div className="dayColumn" ></div>
       )
     }
     let schedule = [];
@@ -37,7 +41,10 @@ class Calendar extends Component {
           {days}
         </div>
         <div className="scheduleContainer">
-          <div className="schedule">
+          <div className="classContainer">
+            {columns}
+          </div>
+          <div className="timeContainer">
             {schedule}
           </div>
         </div>
