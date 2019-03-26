@@ -3,8 +3,8 @@ import { Redirect } from 'react-router-dom';
 
 const Login = props => {
   const { setAuthStatus, authStatus } = props;
-  const [password, usePassword] = useState('');
-  const [username, useUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
 
   if (authStatus) return <Redirect to="/home" />;
 
@@ -15,13 +15,13 @@ const Login = props => {
         name="username"
         type="text"
         value={username}
-        onChange={e => useUsername(e.value)}
+        onChange={e => setUsername(e.value)}
       />
       <input
         name="pass"
         type="password"
         value={password}
-        onChange={e => usePassword(e.value)}
+        onChange={e => setPassword(e.value)}
       />
       <button
         onClick={() => {

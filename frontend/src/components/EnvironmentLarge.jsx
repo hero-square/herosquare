@@ -11,7 +11,6 @@ const EnvironmentLarge = props => {
   const { match, userInfo } = props;
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(props);
   return (
     <>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />

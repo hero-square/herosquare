@@ -4,26 +4,22 @@ import '../style/hamburger.css';
 
 const Header = props => {
   const { isOpen, setIsOpen } = props;
-  
+
   return (
     <header className="App__header">
-      {window.innerWidth < '800px' ? (
-        <div>hi</div>
-      ) : (
-        <button
-          className={`
+      <button
+        className={`
         hamburger
         hamburger--elastic
         Menu__hamburger
         ${isOpen ? 'is-active' : ''}
         `}
-          onClick={() => setIsOpen(!isOpen)}
-          type="button">
-          <span className="hamburger-box">
-            <span className="hamburger-inner" />
-          </span>
-        </button>
-      )}
+        onClick={() => setIsOpen(!isOpen)}
+        type="button">
+        <span className="hamburger-box">
+          <span className="hamburger-inner" />
+        </span>
+      </button>
       <h1 className="App__title"> HeroSquare </h1>
     </header>
   );

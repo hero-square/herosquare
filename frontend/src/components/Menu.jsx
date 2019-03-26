@@ -6,13 +6,14 @@ import list from './routes';
 
 const Menu = props => {
   const { isOpen, setIsOpen } = props;
+
+  //** should have profile picture and name when open */
   
   return (
     <div
       className={`App__menu ${
         isOpen ? 'App__menu--open' : 'App__menu--closed'
       }`}>
-      {/* append is-active to animate hamburger */}
       {list.map(el => (
         <ListElement el={el} isOpen={isOpen} key={uuidv4()} />
       ))}

@@ -4,15 +4,15 @@ import EnvironmentSmall from './EnvironmentSmall';
 import { Redirect } from 'react-router-dom';
 
 const Environment = props => {
-  const [smallScreen, useSmallScreen] = useState(false);
-  const [userInfo, useUserInfo] = useState({});
+  const [smallScreen, setSmallScreen] = useState(false);
+  const [userInfo, setUserInfo] = useState({});
   const { match, authStatus } = props;
 
   useEffect(() => {
     // api call for user data
     //* temporary mock data
     if (!authStatus) return <Redirect to="/" />;
-    useUserInfo({
+    setUserInfo({
       userID: 0,
       name: 'PersonMcPersonFace',
       classes: {
