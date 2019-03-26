@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import '../style/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Login';
-import Environment from './Environment';
+import Protected from './Protected';
 
 const App = props => {
   // TODO: should check for cookies to determine login
   const [authStatus, setAuthStatus] = useState(false);
+  console.log(authStatus)
 
   return (
     <div className="App">
@@ -23,11 +24,9 @@ const App = props => {
               />
             )}
           />
-          <Route path="/signup" component={'SignUp'} />
-          <Route path="/retrievePassword" component={'RetrievePassword'} />
           <Route
             path="/:location"
-            render={props => <Environment authStatus={authStatus} {...props} />}
+            render={props => <Protected authStatus={authStatus} setAuthStatus={setAuthStatus} {...props} />}
           />
         </Switch>
       </Router>

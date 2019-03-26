@@ -5,7 +5,7 @@ import uuidv4 from 'uuid/v4';
 import list from './routes';
 
 const Menu = props => {
-  const { isOpen, setIsOpen } = props;
+  const { isOpen} = props;
 
   //** should have profile picture and name when open */
   
