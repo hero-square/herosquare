@@ -40,7 +40,7 @@ const Protected = props => {
 
   return (
     <>
-      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} setAuthStatus={setAuthStatus} />
 
       <div className="App__wrapper">
         <Menu isOpen={isOpen} name={userInfo.name} picture={userInfo.picture} />
@@ -52,7 +52,7 @@ const Protected = props => {
             <Route
               path={`/home`}
               render={props => (
-                <Home {...props} setAuthStatus={setAuthStatus} />
+                <Home {...props} />
               )}
             />
             <Route
