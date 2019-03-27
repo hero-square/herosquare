@@ -27,31 +27,39 @@ const Login = props => {
         <div className="signin-container">
           <h2 className="signin-heading">Sign In Now</h2>
         </div>
-        <div>
-          <div className="login-wrap">
-            <form onSubmit={handleForm}>
-              <input
-                type="text"
-                required
-                name='username'
-                placeholder='Username'
-                value={username}
-                onChange={e => setUsername(e.target.value)}
-              />
-              <input
-                type="password"
-                required
-                name='password'
-                placeholder='Password'
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-              />
-              <button className="button--solid" type='submit'>Log In</button>
-            </form>
-            <button className="button--solid" onClick={() => <Redirect to="/signup" />}>signup</button>
-            <button className="button--solid" onClick={() => <Redirect to="/retrievePassword" />}>
+        <div className="login-wrap">
+          <form onSubmit={handleForm}>
+            <div>
+            <input
+              className="login-input"
+              type="text"
+              required
+              name='username'
+              placeholder='User ID'
+              value={username}
+              onChange={e => setUsername(e.target.value)}
+            />
+            </div>
+            <div>
+            <input
+              className="login-input"
+              type="password"
+              required
+              name='password'
+              placeholder='Password'
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+            </div>
+            <button className="button--solid" type='submit'>Log In</button>
+          </form>
+          <div className="forget-password">
+            <button className="forgot-password-button" onClick={() => <Redirect to="/retrievePassword" />}>
               Forgot Password?
             </button>
+          </div>
+          <div>
+            <button className="button--solid" onClick={() => <Redirect to="/signup" />}>signup</button>
           </div>
         </div>
       </div>
