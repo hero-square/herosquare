@@ -20,8 +20,8 @@ const PopularArticles = props => {
         <LoadingIcon />
       ) : (
         articles.data.map((article, index) => (
-          // <PopularArticleItem article={article} position={index} key={index} />
-          <div>hi</div>
+          <PopularArticleItem article={article} position={index} key={index} />
+          // <div>hi</div>
         ))
       )}
     </div>

@@ -12,9 +12,9 @@ const Menu = props => {
       className={`App__menu ${
         isOpen ? 'App__menu--open' : 'App__menu--closed'
       }`}>
-      <div>
-        <img src={picture} alt="" width='150px'/>
-        <h2>{name}</h2>
+      <div className="studentprofile">
+        <img className="studentpicture" src={picture} alt="" width='150px'/>
+        <h2 className="studentname">{name}</h2>
       </div>
       {list.map(el => (
         <ListElement el={el} isOpen={isOpen} key={uuidv4()} />
