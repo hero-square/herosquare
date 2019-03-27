@@ -43,6 +43,7 @@ const Login = props => {
             <div>
             <input
               className="login-input"
+              id="password-padding"
               type="password"
               required
               name='password'
@@ -54,12 +55,17 @@ const Login = props => {
             <button className="button--solid" type='submit'>Log In</button>
           </form>
           <div className="forget-password">
-            <button className="forgot-password-button" onClick={() => <Redirect to="/retrievePassword" />}>
+            <button className="not-solid-button" onClick={() => <Redirect to="/retrievePassword" />}>
               Forgot Password?
             </button>
           </div>
-          <div>
-            <button className="button--solid" onClick={() => <Redirect to="/signup" />}>signup</button>
+          <hr className="login-divider"></hr>
+          <div className="social-media-container">
+            <p className="social-media-text" id="social-media-text-top">or you can sign in via your social network</p>
+            <div className="registration">
+              <p className="social-media-text" id="social-media-text-bottom">Don't have an account yet?</p>
+              <button className="not-solid-button" onClick={() => <Redirect to="/signup" />}>Create an Account</button>
+            </div>
           </div>
         </div>
       </div>
