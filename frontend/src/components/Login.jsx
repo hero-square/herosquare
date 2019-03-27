@@ -39,10 +39,10 @@ const Login = props => {
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
-        <button type='submit'>Log In</button>
+        <button className="button--solid" type='submit'>Log In</button>
       </form>
-      <button onClick={() => <Redirect to="/signup" />}>signup</button>
-      <button onClick={() => <Redirect to="/retrievePassword" />}>
+      <button className="button--solid" onClick={() => <Redirect to="/signup" />}>signup</button>
+      <button className="button--solid" onClick={() => <Redirect to="/retrievePassword" />}>
         forgot password
       </button>
     </div>
