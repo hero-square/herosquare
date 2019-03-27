@@ -24,29 +24,36 @@ const Login = props => {
     <div>
       <h1>Welcome to HeroSquare</h1>
       <div className="loginmodal">
-        <form onSubmit={handleForm}>
-          <input
-            type="text"
-            required
-            name='username'
-            placeholder='Username'
-            value={username}
-            onChange={e => setUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            required
-            name='password'
-            placeholder='Password'
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
-          <button className="button--solid" type='submit'>Log In</button>
-        </form>
-        <button className="button--solid" onClick={() => <Redirect to="/signup" />}>signup</button>
-        <button className="button--solid" onClick={() => <Redirect to="/retrievePassword" />}>
-          Forgot Password?
-        </button>
+        <div className="signin-container">
+          <h2 className="signin-heading">Sign In Now</h2>
+        </div>
+        <div>
+          <div className="login-wrap">
+            <form onSubmit={handleForm}>
+              <input
+                type="text"
+                required
+                name='username'
+                placeholder='Username'
+                value={username}
+                onChange={e => setUsername(e.target.value)}
+              />
+              <input
+                type="password"
+                required
+                name='password'
+                placeholder='Password'
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+              />
+              <button className="button--solid" type='submit'>Log In</button>
+            </form>
+            <button className="button--solid" onClick={() => <Redirect to="/signup" />}>signup</button>
+            <button className="button--solid" onClick={() => <Redirect to="/retrievePassword" />}>
+              Forgot Password?
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
