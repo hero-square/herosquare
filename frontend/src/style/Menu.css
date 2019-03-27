@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Ruda');
 
-.Menu__hamburger{
-  align-self:flex-end;
-}
 
 .Menu__list-element {
   width: 90%;

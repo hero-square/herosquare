@@ -13,7 +13,6 @@ const Header = props => {
           className={`
         hamburger
         hamburger--elastic
-        Menu__hamburger
         ${isOpen ? 'is-active' : ''}
         `}
           onClick={() => setIsOpen(!isOpen)}
