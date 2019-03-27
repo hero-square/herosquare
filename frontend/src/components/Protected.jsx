@@ -5,7 +5,7 @@ import Home from './Home';
 import NotFound from './NotFound';
 import Menu from './Menu';
 import Calendar from './Calendar';
-import AddClassesContainer from './AddClassesContainer'
+import AddCoursesContainer from './AddCoursesContainer'
 
 const Protected = props => {
   const [userInfo, setUserInfo] = useState({});
@@ -59,7 +59,7 @@ const Protected = props => {
               path={`/calendar`}
               render={props => <Calendar userInfo={userInfo} {...props} />}
             />
-            <Route path={`/addclasses`} render={props => <AddClassesContainer {...props} />} />
+            <Route path={`/addcourses`} render={props => <AddCoursesContainer {...props} />} />
             <Route component={NotFound} />
             ))}
           </Switch>

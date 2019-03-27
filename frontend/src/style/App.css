@@ -55,6 +55,7 @@
   position: absolute;
   left: 0rem;
   transition: 0.15s ease-in left;
+  margin:10px;
 }
 /* after stretch: left:15rem */
 .App__container--open {

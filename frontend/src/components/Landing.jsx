@@ -1,10 +1,15 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { LandingHeader } from './Headers';
 import PopularArticles from './PopularArticles';
 import '../style/landing.css';
 
 const Landing = props => {
+  
+  useEffect(() => {
+    props.history.push('/addClasses');
+  }, []);
+
   return (
     <div>
       <LandingHeader />

@@ -1,0 +1,19 @@
+
+.course__container{
+}
+
+.courses__current{
+  height:30%;
+  background-color:grey;
+  border-radius: 3px;
+  margin: 0px 10px 40px 0px;
+}
+
+.course__item{
+  display:flex;
+  justify-content:space-around;
+  background-color:white;
+  border-bottom: 1px solid lightblue;
+  border-radius:2px;
+
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import '../style/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Login';
@@ -13,7 +13,7 @@ const App = props => {
     <div className="App">
       <Router>
         <Switch>
-          <Route path='/' exact={true} component={Landing}/>
+          <Route path="/" exact={true} component={Landing} />
           <Route
             path="/Login"
             exact={true}
@@ -27,7 +27,13 @@ const App = props => {
           />
           <Route
             path="/:location"
-            render={props => <Protected authStatus={authStatus} setAuthStatus={setAuthStatus} {...props} />}
+            render={props => (
+              <Protected
+                authStatus={authStatus}
+                setAuthStatus={setAuthStatus}
+                {...props}
+              />
+            )}
           />
         </Switch>
       </Router>

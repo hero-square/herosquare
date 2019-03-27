@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
 
-const AddClass = props => {
+const AddCourse = props => {
   const [department, setDepartment] = useState('');
-  const [classID, setClassID] = useState('');
-  const {setClasses} = props;
+  const [courseID, setCourseID] = useState('');
+  const {setCourses} = props;
 
   const handleChange = ({ name, value }) => {
-    const f = { setDepartment, setClassID };
+    const f = { setDepartment, setCourseID };
     console.log(name, value);
     f[`set${name}`](value);
   };
@@ -28,10 +28,10 @@ const AddClass = props => {
           onChange={e => handleChange(e.target)}
         />
         <input
-          name="ClassID"
-          placeholder="Class"
+          name="CourseID"
+          placeholder="Course"
           type="text"
-          value={classID}
+          value={courseID}
           onChange={e => handleChange(e.target)}
         />
         <button type="submit">Search</button>
@@ -43,4 +43,4 @@ const AddClass = props => {
   );
 };
 
-export default AddClass;
+export default AddCourse;
