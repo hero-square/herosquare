@@ -1,16 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Ruda');
 
 .Menu__hamburger{
   align-self:flex-end;
 }
 
 .Menu__list-element {
-  width: 100%;
-  height: 3rem;
+  width: 90%;
+  height: 4rem;
   padding-left:3rem;
   text-align:left;
+  color: #B6B6B6;
+  font-family: 'Ruda', sans-serif;
+  font-size: 15px;
 }
 .Menu__list-element:hover {
-  background-color: white;
+  background-color: #6ECDEB;
+  color: white;
 }
 
+.studentname {
+  font-size: 16px;
+  color: white;
+}
+
+.studentpicture {
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+}
+
+.studentprofile {
+  position: relative;
+  top: 20px;
+  padding-bottom: 10px;
+}
 
