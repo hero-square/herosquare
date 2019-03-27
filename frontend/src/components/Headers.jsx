@@ -1,9 +1,10 @@
 import React from 'react';
 // import logo from '../logo.svg';
 import '../style/hamburger.css';
+import '../style/header.css';
 
 const Header = props => {
-  const { isOpen, setIsOpen } = props;
+  const { isOpen, setIsOpen, setAuthStatus } = props;
 
   return (
     <header className="App__header">
@@ -12,7 +13,6 @@ const Header = props => {
           className={`
         hamburger
         hamburger--elastic
-        Menu__hamburger
         ${isOpen ? 'is-active' : ''}
         `}
           onClick={() => setIsOpen(!isOpen)}
@@ -22,6 +22,9 @@ const Header = props => {
           </span>
         </button>
         <h1 className="App__title"> HeroSquare </h1>
+      </div>
+      <div className='App__right'>
+        <button className="logout" onClick={()=>setAuthStatus(false)}>Logout</button>
       </div>
     </header>
   );

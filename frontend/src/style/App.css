@@ -5,21 +5,23 @@
 
 .App__logo {
   animation: App-logo-spin infinite 2s ease-in-out;
-  height: 3em;
+  height: 2em;
 }
 
 .App__header {
-  background-color: #282c34;
+  background-color: #FFC26A;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
   color: white;
+  height:75px;
+  font-family: sans-serif;
 }
 
 .App__left {
   display: flex;
-  align-items: center;
+  align-items:center;
 }
 
 .App__wrapper {
@@ -29,9 +31,9 @@
 }
 
 .App__menu {
-  background-color: grey;
+  background-color: #424A5D;
   height: 100%;
-  width: 15rem;
+  width: 16.5rem;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -41,11 +43,11 @@
 /* after stretch: left:0rem */
 .App__menu--closed {
   height: 100%;
-  width: 15rem;
+  width: 16.5rem;
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: -15rem;
+  left: -16.5rem;
 }
 
 .App__container {
@@ -58,7 +60,7 @@
 }
 /* after stretch: left:15rem */
 .App__container--open {
-  left: 15rem;
+  left: 16.5rem;
 }
 
 @media screen and (max-width: 600px) {
