@@ -1,12 +1,32 @@
 //* add new routes here
 const list = [
   {
-    title: 'Home',
+    title: 'Dashboard',
     path: 'home',
+  },
+  {
+    title: 'Add Course',
+    path: 'courses',
   },
   {
     title: 'Calendar',
     path: 'calendar',
+  },
+  {
+    title: 'Professor Ratings',
+    path: 'ratings',
+  },
+  {
+    title: 'Notes',
+    path: 'notes',
+  },
+  {
+    title: 'Forums',
+    path: 'forums',
+  },
+  {
+    title: 'Settings',
+    path: 'settings',
   },
   {
     title: 'Thing',

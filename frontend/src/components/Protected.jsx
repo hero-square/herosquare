@@ -21,7 +21,7 @@ const Protected = props => {
     //* temporary mock data
     setUserInfo({
       userID: 0,
-      name: 'PersonMcPersonFace',
+      name: 'Will Sentance',
       classes: {
         0: {
           schoolID: 0,
@@ -32,7 +32,7 @@ const Protected = props => {
           professor: 'TeacheryMcTeacherFace',
         },
       },
-      picture: 'https://s.hswstatic.com/gif/whiskers-sam.jpg',
+      picture: 'https://pbs.twimg.com/profile_images/902408678602563584/1W5kySzN_400x400.jpg',
     });
     return () => {
     };
