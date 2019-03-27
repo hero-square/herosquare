@@ -7,7 +7,7 @@ import Landing from './Landing';
 
 const App = props => {
   // TODO: should check for cookies/localstorage to determine login
-  const [authStatus, setAuthStatus] = useState(false);
+  const [authStatus, setAuthStatus] = useState(true);
 
   return (
     <div className="App">
