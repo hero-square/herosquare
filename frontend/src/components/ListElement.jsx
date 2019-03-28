@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ListElement = props => {
   const {el,isOpen} = props;
@@ -7,7 +8,7 @@ const ListElement = props => {
     <>
     {isOpen ? 
     <Link to={el.path}>
-      <button className="Menu__list-element">{el.title}</button>
+      <button className="Menu__list-element"><FontAwesomeIcon icon={el.icon}/>  {el.title}</button>
     </Link>:<div />
     }
     </>
