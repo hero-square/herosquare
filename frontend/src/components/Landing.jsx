@@ -7,7 +7,7 @@ import '../style/landing.css';
 const Landing = props => {
   
   useEffect(() => {
-    // props.history.push('/addCourses');
+    props.history.push('/addCourses');
   }, []);
 
   return (

@@ -5,7 +5,7 @@ import CurrentCourses from './AddCourse/CurrentCourses'
 import '../style/courses.css'
 
 const AddCoursesContainer = props => {
-  const [courses, setCourses] = useState([1,2,3,4]);
+  const [courses, setCourses] = useState([1,2,3,4,5,6,7,8,9]);
   //load categories and other class data
   // const url = '';
   // const catalogue = useFetchAPI(url,{isLoading:true, data:null});
