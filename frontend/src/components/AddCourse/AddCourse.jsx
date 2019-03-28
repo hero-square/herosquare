@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 
 const AddCourse = props => {
   const [department, setDepartment] = useState('');
   const [courseID, setCourseID] = useState('');
-  const {setCourses} = props;
+  const { setCourses } = props;
 
   const handleChange = ({ name, value }) => {
     const f = { setDepartment, setCourseID };
@@ -18,8 +18,8 @@ const AddCourse = props => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className=''>
+      <form className='course__form'onSubmit={handleSubmit}>
         <input
           name="Department"
           placeholder="Department"
@@ -34,7 +34,9 @@ const AddCourse = props => {
           value={courseID}
           onChange={e => handleChange(e.target)}
         />
-        <button type="submit">Search</button>
+        <button className="button--solid" type="submit">
+          Search
+        </button>
       </form>
       <div>
         <p>this shows a clickable list of each of the classes available</p>

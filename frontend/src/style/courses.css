@@ -1,9 +1,11 @@
 
 .course__container{
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: column;
 }
 
 .currentcourses{
-  height:30%;
   background-color:grey;
   border-radius: 3px;
   margin: 0px 10px 40px 0px;
@@ -30,4 +32,17 @@
   background-color:white;
   border-bottom: 1px solid lightblue;
   border-radius: 2px;
+  align-items:center;
+}
+.course__form{
+  display:flex;
+}
+
+
+.course__current{
+}
+.course__finder{
+}
+
+.course__right{
 }
