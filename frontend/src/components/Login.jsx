@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../style/Login.css'
 
 const Login = props => {
@@ -62,7 +63,7 @@ const Login = props => {
           <hr className="login-divider"></hr>
           <div className="social-media-container">
             <p className="social-media-text" id="social-media-text-top">or you can sign in via your social network</p>
-            <button id="facebook-button">Facebook</button>
+            <button id="facebook-button"><FontAwesomeIcon icon='coffee'/>Facebook</button>
             <button id="twitter-button">Twitter</button>
             <div className="registration">
               <p className="social-media-text" id="social-media-text-bottom">Don't have an account yet?</p>

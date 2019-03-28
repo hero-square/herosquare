@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import '../style/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import Login from './Login';
 import Protected from './Protected';
 import Landing from './Landing';
+import '../style/App.css';
+
+library.add(fas, fab);
 
 const App = props => {
   // TODO: should check for cookies/localstorage to determine login
