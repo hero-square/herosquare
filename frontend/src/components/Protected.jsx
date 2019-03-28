@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Headers';
+import Headers from './Headers';
 import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import NotFound from './NotFound';
 import Menu from './Menu';
-import Calendar from './Calendar'
+import Calendar from './Calendar';
+import AddCoursesContainer from './AddCoursesContainer'
 
 const Protected = props => {
   const [userInfo, setUserInfo] = useState({});
@@ -34,13 +35,12 @@ const Protected = props => {
       },
       picture: 'https://pbs.twimg.com/profile_images/902408678602563584/1W5kySzN_400x400.jpg',
     });
-    return () => {
-    };
+    return () => {};
   }, []);
 
   return (
     <>
-      <Header isOpen={isOpen} setIsOpen={setIsOpen} setAuthStatus={setAuthStatus} />
+      <Headers isOpen={isOpen} setIsOpen={setIsOpen} setAuthStatus={setAuthStatus} />
 
       <div className="App__wrapper">
         <Menu isOpen={isOpen} name={userInfo.name} picture={userInfo.picture} />
@@ -59,7 +59,8 @@ const Protected = props => {
               path={`/calendar`}
               render={props => <Calendar userInfo={userInfo} {...props} />}
             />
-            <Route path={`/thing`} render={props => <NotFound {...props} />} />
+            <Route path={`/addcourses`} render={props => <AddCoursesContainer {...props} />} />
+            <Route component={NotFound} />
             ))}
           </Switch>
         </div>

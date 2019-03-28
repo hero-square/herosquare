@@ -57,10 +57,12 @@
   position: absolute;
   left: 0rem;
   transition: 0.15s ease-in left;
+  margin:10px;
 }
 /* after stretch: left:15rem */
 .App__container--open {
   left: 16.5rem;
+  width:(100% - 16.5rem);
 }
 
 @media screen and (max-width: 600px) {

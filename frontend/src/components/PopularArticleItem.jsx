@@ -10,7 +10,7 @@ const PopularArticleItem = props => {
           ? 'popular-article--lrg'
           : 'popular-article--sml'
       }`}>
-      <img src={image} alt="image" />
+      <img src={image} alt="article relevant" />
       <h1>{title}</h1>
       <p>{description}</p>
     </div>

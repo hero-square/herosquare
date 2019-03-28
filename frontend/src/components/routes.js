@@ -6,7 +6,7 @@ const list = [
   },
   {
     title: 'Add Course',
-    path: 'courses',
+    path: 'addcourses',
   },
   {
     title: 'Calendar',

@@ -1,0 +1,48 @@
+
+.course__container{
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+}
+
+.currentcourses{
+  background-color:grey;
+  border-radius: 3px;
+  margin: 0px 10px 40px 0px;
+  display:flex;
+  flex-direction: column;
+  margin:0 0 1rem 0;
+}
+
+.currentcourses__title{
+  align-self:flex-start;
+  padding:0;
+  margin: .5rem;
+  font-size: 1.5rem;
+}
+
+.currentcourses__courses{
+  overflow-y:scroll;
+  margin:0 0 1rem 0;
+}
+
+.course__item{
+  display:flex;
+  justify-content:space-around;
+  background-color:white;
+  border-bottom: 1px solid lightblue;
+  border-radius: 2px;
+  align-items:center;
+}
+.course__form{
+  display:flex;
+}
+
+
+.course__current{
+}
+.course__finder{
+}
+
+.course__right{
+}
