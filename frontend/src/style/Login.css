@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Ruda');
+
+.forgot-password {
+}
+
+.loginmodal {
+  background-color: #FFFFFF;
+  margin-top: 88px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 410px;
+  display:center;
+  border-radius: 6px;
+}
+
+.login-divider {
+  width: 97%;
+}
+
+.login-wrap {
+  padding:25px;
+}
+
+.login-input {
+  width: 90%;
+  height: 30px;
+  font-family: 'Ruda', sans-serif;
+  font-size: 17px;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  padding: 6px 12px;
+}
+
+.not-solid-button {
+  color: #428bca;
+  font-family: 'Ruda', sans-serif;
+  font-size: 16px;
+  padding: 0;
+}
+
+.registration {
+  display: block;
+}
+
+.signin-container {
+  background-color: #6ECDEB;
+  border-radius: 6px 6px 0 0;
+  height:90px;
+}
+
+.signin-heading {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 25px;
+  text-align: center;
+  padding: 29px 20px;
+  font-weight: 300;
+}
+
+.social-media-text {
+  color: #797979;
+  font-size: 16px;
+}
+
+#facebook-button {
+  color: #fff;
+  background-color: #5193ea;
+  border: 1px solid transparent;
+  border-color: #2775e2;
+  border-radius: 5px;
+  font-family: 'Ruda', sans-serif;
+  font-size: 17px;
+  height: 40px;
+  padding: 6px 12px;
+  margin-right: 1.5px;
+  width: 110px;
+}
+#password-padding {
+  margin-top: 25px;
+}
+
+#sign-in-button {
+  width: 97%;
+  height: 40px;
+  font-family: 'Ruda', sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  background-color: #6ECDEB;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+
+}
+
+#social-media-text-top {
+  margin: 23px;
+}
+
+#social-media-text-bottom {
+  margin-bottom: 3px;
+  margin-top: 25px;
+}
+
+#twitter-button {
+  color: #fff;
+  background-color: #44ccfe;
+  border: 1px solid transparent;
+  border-color: #2bb4e8;
+  border-radius: 5px;
+  font-family: 'Ruda', sans-serif;
+  font-size: 17px;
+  height: 40px;
+  padding: 6px 12px;
+  margin-left: 1.5px;
+  width: 100px;
+}
